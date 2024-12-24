@@ -14,4 +14,18 @@
         </form>
 
     </div>
+
+    <div class="w-full flex flex-col h-auto">
+        <div class="text-2xl">
+            All Posts
+        </div>
+        <div class="w-full h-auto">
+            @foreach($posts as $post)
+                <div class="flex flex-col border border-amber-100 rounded-lg w-1/2">
+                    <div class="">{{$post->title}}</div>
+                    <div class="">{{$post->body}}</div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </x-layouts.app>

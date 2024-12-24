@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('post');
+        return view('layout.post');
     }
     public function createPost(Request $request)
     {

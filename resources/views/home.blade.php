@@ -4,4 +4,6 @@
 
     <div class="w-1/2 mx-auto">Home page</div>
 
+
+
 </x-layouts.web>

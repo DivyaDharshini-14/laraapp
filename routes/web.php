@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 //Route::get('/', function () {
@@ -9,7 +10,8 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', function () {
-    return view('home');
+
+    return view('home',['posts' => $posts]);
 });
 
 //Route::get(a,[b::class, c]);
@@ -29,4 +31,4 @@ Route::post('/login',[UserController::class,'loginUser'])->name('login');
 
 Route::get('/create', [PostController::class,'create'])->name('create');
 
-Route::post('/create-post',[PostController::class,'createPost'])->name('createPost');
+Route::post('/create-post',[PostController::class,'createPost'])->name('create-post');
